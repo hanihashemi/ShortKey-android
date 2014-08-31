@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--General-->
+    <string name="app_name">کلید میانبر</string>
+    <string name="notification_summary">برنامه ی کلید میانبر در پس زمینه فعال است</string>
+
+    <!--Run Service-->
+    <string name="run_service_title">شروع یا توقف سرویس</string>
+    <string name="run_service_summary">برای اینکه برنامه کار کند لازم است، سرویس فعال باشد</string>
+
+    <!-- Run only screen is off -->
+    <string name="enable_short_key_title">تنها در صفحه خاموش</string>
+    <string name="enable_short_key_summary">تنها در زمانی که صفحه خاموش است دکمه های صدا به عنوان کلید میانبر کار می کنند و اگر صفحه روشن باشد دکمه صدا را کم و زیاد می کنند
+    </string>
+
+    <!--Default volume -->
+    <string name="default_volume_title">میزان صدای آهنگ</string>
+    <string name="default_volume_summary">
+        توجه داشته باشید که برای اعمال تغییر صدا باید یکبار یکی از دکمه های میانبر را بزنید و یا سرویس را خاموش و روشن کنید
+    </string>
+
+    <!--Short Keys-->
+    <string name="short_keys_title">کلید های میانبر</string>
+
+    <!--Options-->
+    <string name="options_title">تنظیمات</string>
+    <string name="languages_list_title">انتخاب زبان</string>
+    <string name="languages_list_summary">تغییر زبان</string>
+    <string name="languages_list_dialog_title">تغییر زبان</string>
+
+    <!--Support-->
+    <string name="support_title">پشتیبانی</string>
+    <string name="FAQ_summary">پرسش و پاسخ های رایج</string>
+    <string name="FAQ_title">پرسش و پاسخ</string>
+    <string name="contact_us_summary">اگر سوال و یا پیشنهادی دارید با ما تماس بگیرید</string>
+    <string name="contact_us_title">تماس با ما</string>
+
+    <!--Screen attributes-->
+    <string name="screen_on_play_mode_title">کلید صدا</string>
+    <string name="screen_on_play_mode_summary">تنظیم کلید میانبر دکمه صدا</string>
+
+    <!--On music play-->
+    <string name="volume_up_title">دکمه بالا</string>
+    <string name="volume_up_summary">زمانیکه دکمه بالا فشرده می شود</string>
+    <string name="volume_up_dialog_title">دکمه بالا</string>
+
+    <string name="volume_down_title">دکمه پایین</string>
+    <string name="volume_down_summary">زمانیکه دکمه پایین فشرده می شود</string>
+    <string name="volume_down_dialog_title">دکمه پایین</string>
+
+    <string name="volume_double_up_title">دوبار دوکمه بالا</string>
+    <string name="volume_double_up_summary">زمانیکه دوبار دکمه بالا فشرده می شود</string>
+    <string name="volume_double_up_dialog_title">دوبار دوکمه بالا</string>
+
+    <string name="volume_double_down_title">دو بار دوکمه پایین</string>
+    <string name="volume_double_down_summary">زمانیکه دوبار دکمه پایین فشرده می شود</string>
+    <string name="volume_double_down_dialog_title">دو بار دوکمه پایین</string>
+
+    <!-- Actions -->
+    <string name="entity_of_action_none">غیر فعال</string>
+    <string name="entity_of_action_next_track">آهنگ بعدی</string>
+    <string name="entity_of_action_previous_track">آهنگ قبلی</string>
+    <string name="entity_of_action_play_track">پخش آهنگ</string>
+    <string name="entity_of_action_pause_track">مکث آهنگ</string>
+
+    <!--FAQ-->
+    <string name="faq_question_1_title">کلید میانبر چه کاری انجام می دهد؟</string>
+    <string name="faq_question_1_summary">کلید میانبر برنامه ای است که فرمان های خاصی را که برای دکمه های صدا تنظیم شده است را اجرا می کند</string>
+</resources>

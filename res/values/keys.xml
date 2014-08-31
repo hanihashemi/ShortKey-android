@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="key_default_volume">pref_key_default_volume</string>
+    <string name="key_category_options">pref_key_category_options</string>
+    <string name="key_checkbox_run_service">pref_key_checkbox_run_service</string>
+    <string name="key_category_short_keys">pref_key_category_short_keys</string>
+    <string name="key_list_languages">pref_key_list_languages</string>
+    <string name="key_category_support">pref_key_support_category</string>
+    <string name="key_faq">pref_key_faq</string>
+    <string name="key_contact_us">pref_key_contact_us</string>
+    <string name="key_checkbox_enable_action">pref_key_checkbox_enable_short_key</string>
+
+
+    <!--Screen short keys-->
+    <string name="key_screen_on_play_mode">pref_key_screen_on_music_playing</string>
+
+    <!--Keys on music played-->
+    <string name="key_list_on_played_volume_up">pref_key_list_on_music_played_volume_up</string>
+    <string name="key_list_on_played_volume_down">pref_key_list_on_music_played_volume_down</string>
+    <string name="key_list_on_played_volume_double_up">pref_key_list_on_music_played_volume_double_up</string>
+    <string name="key_list_on_played_volume_double_down">pref_key_list_on_music_played_volume_double_down</string>
+
+    <string name="value_of_action_none">none</string>
+    <string name="value_of_action_next_track">next_track</string>
+    <string name="value_of_action_previous_track">previous_track</string>
+    <string name="value_of_action_play_track">play_track</string>
+    <string name="value_of_action_pause_track">pause_track</string>
+
+    <!-- Array Actions on Play -->
+    <string-array name="entities_of_on_played_actions">
+        <item>@string/entity_of_action_none</item>
+        <item>@string/entity_of_action_next_track</item>
+        <item>@string/entity_of_action_previous_track</item>
+        <item>@string/entity_of_action_play_track</item>
+        <item>@string/entity_of_action_pause_track</item>
+    </string-array>
+
+    <string-array name="values_of_on_played_actions">
+        <item>@string/value_of_action_none</item>
+        <item>@string/value_of_action_next_track</item>
+        <item>@string/value_of_action_previous_track</item>
+        <item>@string/value_of_action_play_track</item>
+        <item>@string/value_of_action_pause_track</item>
+    </string-array>
+
+    <!-- array language -->
+    <string-array name="values_of_language">
+        <item>@string/value_of_language_english</item>
+        <item>@string/value_of_language_persian</item>
+    </string-array>
+
+    <string-array name="entities_of_language">
+        <item>@string/entity_of_language_english</item>
+        <item>@string/entity_of_language_persian</item>
+    </string-array>
+
+    <string name="value_of_language_english">english</string>
+    <string name="value_of_language_persian">farsi</string>
+</resources>
