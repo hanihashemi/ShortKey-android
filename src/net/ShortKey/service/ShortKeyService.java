@@ -63,7 +63,7 @@ public class ShortKeyService extends Service {
     }
 
     private void registerScreenReceiver() {
-        if (screenReceiver == null) {
+        if (screenReceiver == null) {e
             screenReceiver = new ScreenReceiver();
 
             IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
