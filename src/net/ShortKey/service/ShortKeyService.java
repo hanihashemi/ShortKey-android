@@ -119,7 +119,7 @@ public class ShortKeyService extends Service {
             AlarmManager alarmService = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
             alarmService.set(
                     AlarmManager.ELAPSED_REALTIME,
-                    SystemClock.elapsedRealtime() + 5000,
+                    SystemClock.elapsedRealtime() + 500,
                     restartServicePendingIntent);
         }
     }

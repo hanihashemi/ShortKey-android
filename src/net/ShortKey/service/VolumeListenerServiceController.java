@@ -10,15 +10,9 @@ import net.ShortKey.settings.SettingsProperty;
  * Created by hani on 7/30/14.
  */
 public class VolumeListenerServiceController {
-    public void sendMessageToService()
+    public void restart()
     {
-        Intent myIntent = new Intent(ApplicationContextProvider.getContext(), ShortKeyService.class);
-
-        Bundle bundle = new Bundle();
-        bundle.putCharSequence("extraData", "salam");
-        myIntent.putExtras(bundle);
-
-        PendingIntent.getService(ApplicationContextProvider.getContext(), 0, myIntent, 0);
+        ApplicationContextProvider.getContext().stopService(new Intent(ApplicationContextProvider.getContext(), ShortKeyService.class));
     }
 
     public void ToggleServiceStatus() {
