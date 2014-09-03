@@ -11,7 +11,6 @@ import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.util.Log;
-import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
 import net.ShortKey.ScreenReceiver;
 import net.ShortKey.VolumeKeyReceiver;
@@ -34,8 +33,6 @@ public class ShortKeyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("=========" ,"START SERVICE" );
-
         new Notification().show();
         registerVolumeKeyReceiver();
         registerScreenReceiver();
@@ -63,7 +60,7 @@ public class ShortKeyService extends Service {
     }
 
     private void registerScreenReceiver() {
-        if (screenReceiver == null) {e
+        if (screenReceiver == null) {
             screenReceiver = new ScreenReceiver();
 
             IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
@@ -76,7 +73,7 @@ public class ShortKeyService extends Service {
     private void unregisterVolumeKeyReceiver() {
         if (volumeKeyReceiver != null) {
             try {
-                this.getApplicationContext().unregisterReceiver(volumeKeyReceiver);
+                unregisterReceiver(volumeKeyReceiver);
             } catch (Exception ex) {
                 Log.d("Volume service", ex.getMessage());
             }
@@ -87,7 +84,7 @@ public class ShortKeyService extends Service {
     private void unregisterScreenReceiver() {
         if (screenReceiver != null) {
             try {
-                ApplicationContextProvider.getContext().getApplicationContext().unregisterReceiver(screenReceiver);
+                unregisterReceiver(screenReceiver);
             } catch (Exception ex) {
                 Log.d("screen service", ex.getMessage());
             }
@@ -96,14 +93,12 @@ public class ShortKeyService extends Service {
 
     @Override
     public void onDestroy() {
-        ApplicationContextProvider.getContext().getApplicationContext().unregisterReceiver(screenReceiver);
         restartService();
         super.onDestroy();
     }
 
     @Override
     public void onTaskRemoved(Intent rootIntent) {
-        ApplicationContextProvider.getContext().getApplicationContext().unregisterReceiver(screenReceiver);
         restartService();
     }
 
