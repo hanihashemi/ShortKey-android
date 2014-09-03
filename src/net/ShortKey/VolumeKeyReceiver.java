@@ -78,29 +78,8 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
         if (mAudioManager.getMode() != 0)
             return;
 
-        if (mAudioManager.isMusicActive()) {
-            PowerManager pm = (PowerManager) ApplicationContextProvider.getContext().getSystemService(Context.POWER_SERVICE);
-            if (new SettingsProperty().getCheckboxEnableAction() && pm.isScreenOn()) {
-                AudioManager am =
-                        (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-
-                int volume = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-                if (volume == am.getStreamMaxVolume(AudioManager.STREAM_MUSIC)) {
-                    volume--;
-                    mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
-                } else if (volume == 1) {
-                    volume++;
-                    mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
-                }
-                new SettingsProperty().setDefaultVolume(volume);
-                lastVolume = volume;
-
-                return;
-            }
-
+        if (mAudioManager.isMusicActive())
             volumeChangedOnMusicMode();
-        }
-
     }
 
     private void runAction(ActionType actionCode) {

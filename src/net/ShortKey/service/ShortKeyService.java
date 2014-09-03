@@ -9,8 +9,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.os.IBinder;
+import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
+import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
 import net.ShortKey.ScreenReceiver;
 import net.ShortKey.VolumeKeyReceiver;
@@ -37,11 +39,20 @@ public class ShortKeyService extends Service {
         registerVolumeKeyReceiver();
         registerScreenReceiver();
 
+        setPlaying();
+
+        return Service.START_NOT_STICKY;
+    }
+
+    private void setPlaying() {
+        if (new SettingsProperty().getCheckboxEnableWhenScreenIsOff()) {
+            PowerManager pm = (PowerManager) ApplicationContextProvider.getContext().getSystemService(Context.POWER_SERVICE);
+            if (pm.isScreenOn())
+                return;
+        }
         mediaPlayer = MediaPlayer.create(this, R.raw.empty);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
-
-        return Service.START_NOT_STICKY;
     }
 
     public void onCreate() {

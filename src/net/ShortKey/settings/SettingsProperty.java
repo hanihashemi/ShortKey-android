@@ -21,7 +21,7 @@ public class SettingsProperty {
         editor.commit();
     }
 
-    public boolean getCheckboxEnableAction() {
+    public boolean getCheckboxEnableWhenScreenIsOff() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());
         return prefs.getBoolean(ApplicationContextProvider.getContext().getString(R.string.key_checkbox_enable_action), false);
     }
