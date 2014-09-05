@@ -10,6 +10,7 @@
     <string name="key_faq">pref_key_faq</string>
     <string name="key_contact_us">pref_key_contact_us</string>
     <string name="key_checkbox_enable_action">pref_key_checkbox_enable_short_key</string>
+    <string name="key_checkbox_enable_when_music_is_playing">pref_key_checkbox_enable_when_music_is_playing</string>
 
 
     <!--Screen short keys-->

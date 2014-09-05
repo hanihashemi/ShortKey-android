@@ -14,7 +14,7 @@ import android.preference.PreferenceFragment;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.MultiLanguage;
 import net.ShortKey.R;
-import net.ShortKey.service.VolumeListenerServiceController;
+import net.ShortKey.service.ShortKeyServiceController;
 
 public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
@@ -61,12 +61,16 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(getString(R.string.key_checkbox_run_service)))
             onRunServiceClicked();
+        else if (key.equals(getString(R.string.key_checkbox_enable_action)))
+            new ShortKeyServiceController().restart();
+        else if (key.equals(getString(R.string.key_checkbox_enable_when_music_is_playing)))
+            new ShortKeyServiceController().restart();
         else
             onItemClicked(key);
     }
 
     private void onRunServiceClicked() {
-        new VolumeListenerServiceController().ToggleServiceStatus();
+        new ShortKeyServiceController().ToggleServiceStatus();
     }
 
     private void onItemClicked(String key) {

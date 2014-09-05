@@ -13,6 +13,12 @@
             android:title="@string/enable_short_key_title"
             android:icon="@drawable/screenoff"
             android:defaultValue="false"/>
+    <CheckBoxPreference
+            android:key="@string/key_checkbox_enable_when_music_is_playing"
+            android:summary="@string/enable_music_play_summary"
+            android:title="@string/enable_music_play_title"
+            android:icon="@drawable/play"
+            android:defaultValue="false"/>
     <PreferenceCategory
             android:key="@string/key_category_short_keys"
             android:title="@string/short_keys_title">

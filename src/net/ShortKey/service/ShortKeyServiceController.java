@@ -15,7 +15,7 @@ import net.ShortKey.settings.SettingsProperty;
 /**
  * Created by hani on 7/30/14.
  */
-public class VolumeListenerServiceController {
+public class ShortKeyServiceController {
     public void restart() {
         ApplicationContextProvider.getContext().stopService(new Intent(ApplicationContextProvider.getContext(), ShortKeyService.class));
     }

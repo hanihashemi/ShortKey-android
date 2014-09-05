@@ -1,4 +1,4 @@
-package net.ShortKey;
+package net.ShortKey.receiver;
 
 
 import android.content.BroadcastReceiver;
@@ -11,6 +11,8 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
+import net.ShortKey.ApplicationContextProvider;
+import net.ShortKey.R;
 import net.ShortKey.settings.SettingsProperty;
 
 import java.util.Timer;

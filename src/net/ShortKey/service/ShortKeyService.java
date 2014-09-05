@@ -12,8 +12,8 @@ import android.os.*;
 import android.util.Log;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
-import net.ShortKey.ScreenReceiver;
-import net.ShortKey.VolumeKeyReceiver;
+import net.ShortKey.receiver.ScreenReceiver;
+import net.ShortKey.receiver.VolumeKeyReceiver;
 import net.ShortKey.notify.Notification;
 import net.ShortKey.settings.SettingsProperty;
 
@@ -67,6 +67,8 @@ public class ShortKeyService extends Service {
             if (pm.isScreenOn())
                 return;
         }
+        if (new SettingsProperty().getCheckboxEnableWhenMusicIsPlay())
+            return;
         playMusic();
     }
 

@@ -2,7 +2,7 @@ package net.ShortKey;
 
 import android.app.Activity;
 import android.os.Bundle;
-import net.ShortKey.service.VolumeListenerServiceController;
+import net.ShortKey.service.ShortKeyServiceController;
 import net.ShortKey.settings.SettingsFragment;
 
 public class Main extends Activity {
@@ -18,6 +18,6 @@ public class Main extends Activity {
         getFragmentManager().beginTransaction().replace(android.R.id.content,
                 new SettingsFragment()).commit();
 
-        new VolumeListenerServiceController().ToggleServiceStatus();
+        new ShortKeyServiceController().ToggleServiceStatus();
     }
 }

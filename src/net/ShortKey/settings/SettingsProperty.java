@@ -26,6 +26,11 @@ public class SettingsProperty {
         return prefs.getBoolean(ApplicationContextProvider.getContext().getString(R.string.key_checkbox_enable_action), false);
     }
 
+    public boolean getCheckboxEnableWhenMusicIsPlay() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());
+        return prefs.getBoolean(ApplicationContextProvider.getContext().getString(R.string.key_checkbox_enable_when_music_is_playing), false);
+    }
+
     public int getDefaultVolume()
     {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());

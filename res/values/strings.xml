@@ -1,72 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <resources>
-        <!--General-->
-        <string name="app_name">ShortKey</string>
-        <string name="notification_summary">Volume shortkey is running in background</string>
+<resources>
+    <!--General-->
+    <string name="app_name">ShortKey</string>
+    <string name="notification_summary">Volume shortkey is running in background</string>
 
-        <!--Run Service-->
-        <string name="run_service_title">Start/Stop Service</string>
-        <string name="run_service_summary">To make the program work service must be activated</string>
+    <!--Run Service-->
+    <string name="run_service_title">Start/Stop Service</string>
+    <string name="run_service_summary">To make the program work service must be activated</string>
 
-        <!-- Run only screen is off -->
-        <string name="enable_short_key_title">Enable only when screen is off</string>
-        <string name="enable_short_key_summary">When screen is off volume key will work and when screen is on volume key will change the phone volume
-        </string>
+    <!-- Run only screen is off -->
+    <string name="enable_short_key_title">Enable when screen is off</string>
+    <string name="enable_short_key_summary">When screen is off volume key will work and when screen is on volume key
+        will change the phone volume
+    </string>
 
-        <!--Default volume -->
-        <string name="default_volume_title">Adjust Music Volume</string>
-        <string name="default_volume_summary">Pay Attention: to update the music volume you should restart service or push the volume key</string>
+    <!-- Run only music is play -->
+    <string name="enable_music_play_title">Enable when music is play</string>
+    <string name="enable_music_play_summary">When music is play volume key will work and when music is stop volume will change the phone volume
+    </string>
 
-        <!--Short Keys-->
-        <string name="short_keys_title">SHORT KEYS</string>
+    <!--Default volume -->
+    <string name="default_volume_title">Adjust Music Volume</string>
+    <string name="default_volume_summary">Pay Attention: to update the music volume you should restart service or push
+        the volume key
+    </string>
 
-        <!--Options-->
-        <string name="options_title">OPTIONS</string>
-        <string name="languages_list_title">Language</string>
-        <string name="languages_list_summary">Change the language</string>
-        <string name="languages_list_dialog_title">Change the language</string>
+    <!--Short Keys-->
+    <string name="short_keys_title">SHORT KEYS</string>
 
-        <!--Support-->
-        <string name="support_title">SUPPORT</string>
-        <string name="FAQ_summary">Frequently Asked Question</string>
-        <string name="FAQ_title">FAQ</string>
-        <string name="contact_us_summary">Feel free to contact us if you have any questions or suggestions</string>
-        <string name="contact_us_title">Contact Us</string>
+    <!--Options-->
+    <string name="options_title">OPTIONS</string>
+    <string name="languages_list_title">Language</string>
+    <string name="languages_list_summary">Change the language</string>
+    <string name="languages_list_dialog_title">Change the language</string>
 
-        <!--Screen attributes-->
-        <string name="screen_on_play_mode_title">Volume short keys</string>
-        <string name="screen_on_play_mode_summary">Short keys action</string>
+    <!--Support-->
+    <string name="support_title">SUPPORT</string>
+    <string name="FAQ_summary">Frequently Asked Question</string>
+    <string name="FAQ_title">FAQ</string>
+    <string name="contact_us_summary">Feel free to contact us if you have any questions or suggestions</string>
+    <string name="contact_us_title">Contact Us</string>
 
-        <!--On music play-->
-        <string name="volume_up_title">Volume Up</string>
-        <string name="volume_up_summary">When volume up pressed</string>
-        <string name="volume_up_dialog_title">On Volume Up Pressed</string>
+    <!--Screen attributes-->
+    <string name="screen_on_play_mode_title">Volume short keys</string>
+    <string name="screen_on_play_mode_summary">Short keys action</string>
 
-        <string name="volume_down_title">Volume Down</string>
-        <string name="volume_down_summary">When volume down pressed</string>
-        <string name="volume_down_dialog_title">On Volume Down Pressed</string>
+    <!--On music play-->
+    <string name="volume_up_title">Volume Up</string>
+    <string name="volume_up_summary">When volume up pressed</string>
+    <string name="volume_up_dialog_title">On Volume Up Pressed</string>
 
-        <string name="volume_double_up_title">Volume Double Up</string>
-        <string name="volume_double_up_summary">When volume up pressed twice</string>
-        <string name="volume_double_up_dialog_title">On Volume Double Up Pressed</string>
+    <string name="volume_down_title">Volume Down</string>
+    <string name="volume_down_summary">When volume down pressed</string>
+    <string name="volume_down_dialog_title">On Volume Down Pressed</string>
 
-        <string name="volume_double_down_title">Volume Double Down</string>
-        <string name="volume_double_down_summary">When volume down pressed twice</string>
-        <string name="volume_double_down_dialog_title">On Volume Double Down Pressed</string>
+    <string name="volume_double_up_title">Volume Double Up</string>
+    <string name="volume_double_up_summary">When volume up pressed twice</string>
+    <string name="volume_double_up_dialog_title">On Volume Double Up Pressed</string>
 
-        <!-- Actions -->
-        <string name="entity_of_action_none">None</string>
-        <string name="entity_of_action_next_track">Next track</string>
-        <string name="entity_of_action_previous_track">Previous track</string>
-        <string name="entity_of_action_play_track">Play track</string>
-        <string name="entity_of_action_pause_track">Pause track</string>
+    <string name="volume_double_down_title">Volume Double Down</string>
+    <string name="volume_double_down_summary">When volume down pressed twice</string>
+    <string name="volume_double_down_dialog_title">On Volume Double Down Pressed</string>
 
-        <!--Array Language-->
-        <string name="entity_of_language_english">English</string>
-        <string name="entity_of_language_persian">پارسی</string>
+    <!-- Actions -->
+    <string name="entity_of_action_none">None</string>
+    <string name="entity_of_action_next_track">Next track</string>
+    <string name="entity_of_action_previous_track">Previous track</string>
+    <string name="entity_of_action_play_track">Play track</string>
+    <string name="entity_of_action_pause_track">Pause track</string>
+
+    <!--Array Language-->
+    <string name="entity_of_language_english">English</string>
+    <string name="entity_of_language_persian">پارسی</string>
 
     <!--FAQ-->
     <string name="faq_question_1_title">What is the ShortKey app?</string>
-    <string name="faq_question_1_summary">ShortKey is a app to use volume key for special action like playing or pausing songs</string>
+    <string name="faq_question_1_summary">ShortKey is a app to use volume key for special action like playing or pausing
+        songs
+    </string>
 
-    </resources>
+</resources>
