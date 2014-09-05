@@ -8,9 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.MediaPlayer;
-import android.os.IBinder;
-import android.os.PowerManager;
-import android.os.SystemClock;
+import android.os.*;
 import android.util.Log;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
@@ -27,10 +25,29 @@ public class ShortKeyService extends Service {
     private ScreenReceiver screenReceiver = null;
     private static MediaPlayer mediaPlayer;
 
+    static final int MSG_SET_STRING_VALUE = 4;
+    final Messenger mMessenger = new Messenger(new IncomingHandler());
 
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return mMessenger.getBinder();
+    }
+
+    class IncomingHandler extends Handler {
+
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case MSG_SET_STRING_VALUE:
+                    if (msg.arg1 == 1)
+                        playMusic();
+                    else
+                        stopMusic();
+                    break;
+                default:
+                    super.handleMessage(msg);
+            }
+        }
     }
 
     @Override
@@ -39,20 +56,18 @@ public class ShortKeyService extends Service {
         registerVolumeKeyReceiver();
         registerScreenReceiver();
 
-        setPlaying();
+        setMusicStatus();
 
         return Service.START_NOT_STICKY;
     }
 
-    private void setPlaying() {
+    private void setMusicStatus() {
         if (new SettingsProperty().getCheckboxEnableWhenScreenIsOff()) {
             PowerManager pm = (PowerManager) ApplicationContextProvider.getContext().getSystemService(Context.POWER_SERVICE);
             if (pm.isScreenOn())
                 return;
         }
-        mediaPlayer = MediaPlayer.create(this, R.raw.empty);
-        mediaPlayer.setLooping(true);
-        mediaPlayer.start();
+        playMusic();
     }
 
     public void onCreate() {
@@ -114,8 +129,7 @@ public class ShortKeyService extends Service {
     }
 
     private void restartService() {
-        if (mediaPlayer != null)
-            mediaPlayer.stop();
+        stopMusic();
 
         unregisterScreenReceiver();
         unregisterVolumeKeyReceiver();
@@ -133,5 +147,20 @@ public class ShortKeyService extends Service {
                     SystemClock.elapsedRealtime() + 500,
                     restartServicePendingIntent);
         }
+    }
+
+    private void playMusic() {
+        mediaPlayer = MediaPlayer.create(this, R.raw.empty);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
+
+        Log.d("=====", "play music");
+    }
+
+    private void stopMusic() {
+        if (mediaPlayer != null)
+            mediaPlayer.stop();
+
+        Log.d("=====", "stop music");
     }
 }

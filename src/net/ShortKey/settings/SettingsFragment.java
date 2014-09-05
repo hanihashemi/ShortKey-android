@@ -77,7 +77,8 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
 //        lp.setSummary(getString(R.string.pref_yourKey) + ": %s");
 
         if (key.equals(getString(R.string.key_list_languages))) {
-            onConfigurationChanged(new MultiLanguage().setLanguage());}
+            onConfigurationChanged(new MultiLanguage().setLanguage());
+        }
     }
 
     @Override
