@@ -81,7 +81,12 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
             return;
 
         if (mAudioManager.isMusicActive())
-            volumeChangedOnMusicMode();
+            if (new SettingsProperty().getCheckboxEnableWhenScreenIsOff()) {
+                PowerManager pm = (PowerManager) ApplicationContextProvider.getContext().getSystemService(Context.POWER_SERVICE);
+                if (pm.isScreenOn())
+                    return;
+            }
+        volumeChangedOnMusicMode();
     }
 
     private void runAction(ActionType actionCode) {
