@@ -18,13 +18,13 @@ public class ScreenReceiver extends BroadcastReceiver {
                 return;
 
             if (new SettingsProperty().getCheckboxEnableWhenScreenIsOff())
-                new ShortKeyServiceController().setMusicStatus(1);
+                new ShortKeyServiceController().sendMessage(ShortKeyServiceController.MSG_PLAY_MUSIC);
         } else if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
             if (new SettingsProperty().getCheckboxEnableWhenMusicIsPlay())
                 return;
 
             if (new SettingsProperty().getCheckboxEnableWhenScreenIsOff())
-                new ShortKeyServiceController().setMusicStatus(0);
+                new ShortKeyServiceController().sendMessage(ShortKeyServiceController.MSG_STOP_MUSIC);
         }
     }
 

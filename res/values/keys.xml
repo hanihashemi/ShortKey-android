@@ -27,6 +27,8 @@
     <string name="value_of_action_previous_track">previous_track</string>
     <string name="value_of_action_play_track">play_track</string>
     <string name="value_of_action_pause_track">pause_track</string>
+    <string name="value_of_action_start_video_recorder">start_video_recorder</string>
+    <string name="value_of_action_stop_video_recorder">stop_video_recorder</string>
 
     <!-- Array Actions on Play -->
     <string-array name="entities_of_on_played_actions">
@@ -35,6 +37,8 @@
         <item>@string/entity_of_action_previous_track</item>
         <item>@string/entity_of_action_play_track</item>
         <item>@string/entity_of_action_pause_track</item>
+        <item>@string/entity_of_action_start_video_recorder</item>
+        <item>@string/entity_of_action_stop_video_recorder</item>
     </string-array>
 
     <string-array name="values_of_on_played_actions">
@@ -43,6 +47,8 @@
         <item>@string/value_of_action_previous_track</item>
         <item>@string/value_of_action_play_track</item>
         <item>@string/value_of_action_pause_track</item>
+        <item>@string/value_of_action_start_video_recorder</item>
+        <item>@string/value_of_action_stop_video_recorder</item>
     </string-array>
 
     <!-- array language -->

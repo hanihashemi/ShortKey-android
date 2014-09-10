@@ -2,27 +2,28 @@
 <resources>
     <!--General-->
     <string name="app_name">ShortKey</string>
-    <string name="notification_summary">Volume shortkey is running in background</string>
+    <string name="notification_summary">ShortKey is running in background</string>
 
     <!--Run Service-->
     <string name="run_service_title">Start/Stop Service</string>
-    <string name="run_service_summary">To make the program work service must be activated</string>
+    <string name="run_service_summary">To make ShortKey work, service must be activated</string>
 
     <!-- Run only screen is off -->
-    <string name="enable_short_key_title">Enable when screen is off</string>
-    <string name="enable_short_key_summary">When screen is off volume key will work and when screen is on volume key
-        will change the phone volume
+    <string name="enable_short_key_title">Screen Off Mode</string>
+    <string name="enable_short_key_summary">
+        ShortKey will use volume keys only when the screen is off
     </string>
 
     <!-- Run only music is play -->
-    <string name="enable_music_play_title">Enable when music is play</string>
-    <string name="enable_music_play_summary">When music is play volume key will work and when music is stop volume will change the phone volume
+    <string name="enable_music_play_title">Playing Time Mode</string>
+    <string name="enable_music_play_summary">
+        ShortKey will use volume keys only when music is playing
     </string>
 
     <!--Default volume -->
-    <string name="default_volume_title">Adjust Music Volume</string>
-    <string name="default_volume_summary">Pay Attention: to update the music volume you should restart service or push
-        the volume key
+    <string name="default_volume_title">Adjust Playing Volume</string>
+    <string name="default_volume_summary">
+        Use this to adjust playing volume when the ShortKey is enabled
     </string>
 
     <!--Short Keys-->
@@ -68,14 +69,16 @@
     <string name="entity_of_action_previous_track">Previous track</string>
     <string name="entity_of_action_play_track">Play track</string>
     <string name="entity_of_action_pause_track">Pause track</string>
+    <string name="entity_of_action_start_video_recorder">Start video recorder</string>
+    <string name="entity_of_action_stop_video_recorder">Stop video recorder</string>
 
     <!--Array Language-->
     <string name="entity_of_language_english">English</string>
     <string name="entity_of_language_persian">پارسی</string>
 
     <!--FAQ-->
-    <string name="faq_question_1_title">What is the ShortKey app?</string>
-    <string name="faq_question_1_summary">ShortKey is a app to use volume key for special action like playing or pausing
+    <string name="faq_question_1_title">What is ShortKey?</string>
+    <string name="faq_question_1_summary">ShortKey is an app to use volume key for actions like playing or pausing
         songs
     </string>
 

@@ -12,9 +12,10 @@ import android.os.*;
 import android.util.Log;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
+import net.ShortKey.VideoRecorder;
+import net.ShortKey.notify.Notification;
 import net.ShortKey.receiver.ScreenReceiver;
 import net.ShortKey.receiver.VolumeKeyReceiver;
-import net.ShortKey.notify.Notification;
 import net.ShortKey.settings.SettingsProperty;
 
 /**
@@ -24,8 +25,8 @@ public class ShortKeyService extends Service {
     private VolumeKeyReceiver volumeKeyReceiver = null;
     private ScreenReceiver screenReceiver = null;
     private static MediaPlayer mediaPlayer;
+    private VideoRecorder videoRecorder;
 
-    static final int MSG_SET_STRING_VALUE = 4;
     final Messenger mMessenger = new Messenger(new IncomingHandler());
 
     @Override
@@ -38,11 +39,17 @@ public class ShortKeyService extends Service {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case MSG_SET_STRING_VALUE:
-                    if (msg.arg1 == 1)
-                        playMusic();
-                    else
-                        stopMusic();
+                case ShortKeyServiceController.MSG_PLAY_MUSIC:
+                    playMusic();
+                    break;
+                case ShortKeyServiceController.MSG_STOP_MUSIC:
+                    stopMusic();
+                    break;
+                case ShortKeyServiceController.MSG_START_RECORD:
+                    startVideoRecorder();
+                    break;
+                case ShortKeyServiceController.MSG_STOP_RECORD:
+                    stopVideoRecorder();
                     break;
                 default:
                     super.handleMessage(msg);
@@ -131,6 +138,7 @@ public class ShortKeyService extends Service {
     }
 
     private void restartService() {
+        stopVideoRecorder();
         stopMusic();
 
         unregisterScreenReceiver();
@@ -155,14 +163,27 @@ public class ShortKeyService extends Service {
         mediaPlayer = MediaPlayer.create(this, R.raw.empty);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
-
-        Log.d("=====", "play music");
     }
 
     private void stopMusic() {
         if (mediaPlayer != null)
             mediaPlayer.stop();
+    }
 
-        Log.d("=====", "stop music");
+    private void startVideoRecorder() {
+        if (videoRecorder == null) {
+            videoRecorder = new VideoRecorder();
+            videoRecorder.start();
+        } else {
+            videoRecorder.stop();
+            videoRecorder = null;
+        }
+    }
+
+    private void stopVideoRecorder() {
+        if (videoRecorder != null) {
+            videoRecorder.stop();
+            videoRecorder = null;
+        }
     }
 }

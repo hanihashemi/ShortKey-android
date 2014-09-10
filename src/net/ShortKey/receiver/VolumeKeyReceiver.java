@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
+import net.ShortKey.service.ShortKeyServiceController;
 import net.ShortKey.settings.SettingsProperty;
 
 import java.util.Timer;
@@ -181,6 +182,10 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
             } else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_pause_track))) {
                 sendMediaKeyCode(mContext, KeyEvent.KEYCODE_MEDIA_PAUSE);
                 MediaPlayer.create(ApplicationContextProvider.getContext(), R.raw.pause).start();
+            }else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_start_video_recorder))) {
+                new ShortKeyServiceController().sendMessage(ShortKeyServiceController.MSG_START_RECORD);
+            }else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_stop_video_recorder))) {
+                new ShortKeyServiceController().sendMessage(ShortKeyServiceController.MSG_STOP_RECORD);
             }
         }
     }

@@ -16,6 +16,12 @@ import net.ShortKey.settings.SettingsProperty;
  * Created by hani on 7/30/14.
  */
 public class ShortKeyServiceController {
+
+    public static final int MSG_PLAY_MUSIC = 1;
+    public static final int MSG_STOP_MUSIC = 2;
+    public static final int MSG_START_RECORD = 3;
+    public static final int MSG_STOP_RECORD = 4;
+
     public void restart() {
         ApplicationContextProvider.getContext().stopService(new Intent(ApplicationContextProvider.getContext(), ShortKeyService.class));
     }
@@ -30,13 +36,12 @@ public class ShortKeyServiceController {
         }
     }
 
-    public void setMusicStatus(final int value) {
-
+    public void sendMessage(final int message) {
         ServiceConnection mConnection = new ServiceConnection() {
             public void onServiceConnected(ComponentName className, IBinder service) {
                 Messenger mService = new Messenger(service);
                 try {
-                    Message msg = Message.obtain(null, ShortKeyService.MSG_SET_STRING_VALUE, value, 0);
+                    Message msg = Message.obtain(null, message, 0, 0);
                     mService.send(msg);
                 } catch (RemoteException e) {
                     Log.d("ShortKey Error: ", e.getMessage());
