@@ -45,11 +45,8 @@ public class ShortKeyService extends Service {
                 case ShortKeyServiceController.MSG_STOP_MUSIC:
                     stopMusic();
                     break;
-                case ShortKeyServiceController.MSG_START_RECORD:
-                    startVideoRecorder();
-                    break;
-                case ShortKeyServiceController.MSG_STOP_RECORD:
-                    stopVideoRecorder();
+                case ShortKeyServiceController.MSG_START_STOP_RECORD:
+                    startAndStopRecord();
                     break;
                 default:
                     super.handleMessage(msg);
@@ -170,7 +167,7 @@ public class ShortKeyService extends Service {
             mediaPlayer.stop();
     }
 
-    private void startVideoRecorder() {
+    private void startAndStopRecord() {
         if (videoRecorder == null) {
             videoRecorder = new VideoRecorder();
             videoRecorder.start();

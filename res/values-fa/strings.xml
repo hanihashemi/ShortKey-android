@@ -6,17 +6,23 @@
 
     <!--Run Service-->
     <string name="run_service_title">شروع یا توقف سرویس</string>
-    <string name="run_service_summary">برای اینکه برنامه کار کند لازم است، سرویس فعال باشد</string>
+    <string name="run_service_summary">برای اینکه برنامه کار کند، لازم است سرویس فعال باشد</string>
 
     <!-- Run only screen is off -->
-    <string name="enable_short_key_title">تنها در صفحه خاموش</string>
-    <string name="enable_short_key_summary">تنها در زمانی که صفحه خاموش است دکمه های صدا به عنوان کلید میانبر کار می کنند و اگر صفحه روشن باشد دکمه صدا را کم و زیاد می کنند
+    <string name="enable_short_key_title">حالت صفحه خاموش</string>
+    <string name="enable_short_key_summary">کلید میانبر تنها زمانی از دکمه های صدا استفاده می کند که صفحه  گوشی خاموش باشد
+    </string>
+
+    <!-- Run only music is play -->
+    <string name="enable_music_play_title">حالت پخش آهنگ</string>
+    <string name="enable_music_play_summary">
+        کلید میانبر تنها زمانی از دکمه های صدا استفاده می کند که آهنگی در حال پخش باشد
     </string>
 
     <!--Default volume -->
     <string name="default_volume_title">میزان صدای آهنگ</string>
     <string name="default_volume_summary">
-        توجه داشته باشید که برای اعمال تغییر صدا باید یکبار یکی از دکمه های میانبر را بزنید و یا سرویس را خاموش و روشن کنید
+        موقعی که کلید میانبر فعال است، برای تنظیم میزان صدای آهنگ از این قابلیت استفاده کنید
     </string>
 
     <!--Short Keys-->

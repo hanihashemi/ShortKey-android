@@ -93,7 +93,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
             final Intent result = new Intent(android.content.Intent.ACTION_SEND);
             result.setType("plain/text");
             result.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"jhanihashemi@gmail.com"});
-            result.putExtra(android.content.Intent.EXTRA_SUBJECT, "Feedback");
+            result.putExtra(android.content.Intent.EXTRA_SUBJECT, "ShortKey [Feedback]");
             result.putExtra(android.content.Intent.EXTRA_TEXT, "");
 
             startActivity(result);

@@ -69,8 +69,7 @@
     <string name="entity_of_action_previous_track">Previous track</string>
     <string name="entity_of_action_play_track">Play track</string>
     <string name="entity_of_action_pause_track">Pause track</string>
-    <string name="entity_of_action_start_video_recorder">Start video recorder</string>
-    <string name="entity_of_action_stop_video_recorder">Stop video recorder</string>
+    <string name="entity_of_action_start_stop_video_recorder">Start/Stop video recorder</string>
 
     <!--Array Language-->
     <string name="entity_of_language_english">English</string>

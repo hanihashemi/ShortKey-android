@@ -19,8 +19,7 @@ public class ShortKeyServiceController {
 
     public static final int MSG_PLAY_MUSIC = 1;
     public static final int MSG_STOP_MUSIC = 2;
-    public static final int MSG_START_RECORD = 3;
-    public static final int MSG_STOP_RECORD = 4;
+    public static final int MSG_START_STOP_RECORD = 3;
 
     public void restart() {
         ApplicationContextProvider.getContext().stopService(new Intent(ApplicationContextProvider.getContext(), ShortKeyService.class));
