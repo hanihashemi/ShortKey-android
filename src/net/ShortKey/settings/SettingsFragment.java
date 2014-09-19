@@ -4,6 +4,8 @@ package net.ShortKey.settings;
  * Created by hani on 8/8/14.
  */
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -14,6 +16,7 @@ import android.preference.PreferenceFragment;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.MultiLanguage;
 import net.ShortKey.R;
+import net.ShortKey.admin.AdminController;
 import net.ShortKey.service.ShortKeyServiceController;
 
 public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.OnPreferenceClickListener {
@@ -35,6 +38,9 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
 
         CheckBoxPreference chkService = (CheckBoxPreference) findPreference(ApplicationContextProvider.getContext().getString(R.string.key_checkbox_run_service));
         chkService.setChecked(settingsProperty.getCheckboxService());
+
+        CheckBoxPreference chkAdminAccess = (CheckBoxPreference) findPreference(ApplicationContextProvider.getContext().getString(R.string.key_admin_access));
+        chkAdminAccess.setChecked(new AdminController().isActivate());
     }
 
     private void handlePreferences() {
@@ -61,11 +67,25 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(getString(R.string.key_checkbox_run_service)))
             onRunServiceClicked();
-        else if (key.equals(getString(R.string.key_checkbox_enable_action)))
+        else if (key.equals(getString(R.string.key_checkbox_enable_action))) {
             new ShortKeyServiceController().restart();
-        else if (key.equals(getString(R.string.key_checkbox_enable_when_music_is_playing)))
+//            AlertDialog.Builder alert = new AlertDialog.Builder(this.getActivity());
+//            alert.setTitle("Doctor");
+//            alert.setMessage("message");
+//            alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialog, int id) {
+//                }
+//            });
+//            alert.show();
+        } else if (key.equals(getString(R.string.key_checkbox_enable_when_music_is_playing)))
             new ShortKeyServiceController().restart();
-        else
+        else if (key.equals(getString(R.string.key_admin_access))) {
+            AdminController adminController = new AdminController();
+            if (adminController.isActivate())
+                adminController.deactiveAdminMode();
+            else
+                adminController.activeAdminMode(this);
+        } else
             onItemClicked(key);
     }
 

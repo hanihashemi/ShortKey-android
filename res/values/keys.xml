@@ -11,6 +11,7 @@
     <string name="key_contact_us">pref_key_contact_us</string>
     <string name="key_checkbox_enable_action">pref_key_checkbox_enable_short_key</string>
     <string name="key_checkbox_enable_when_music_is_playing">pref_key_checkbox_enable_when_music_is_playing</string>
+    <string name="key_admin_access">pref_admin_access</string>
 
 
     <!--Screen short keys-->
@@ -28,6 +29,7 @@
     <string name="value_of_action_play_track">play_track</string>
     <string name="value_of_action_pause_track">pause_track</string>
     <string name="value_of_action_start_stop_video_recorder">start_stop_video_recorder</string>
+    <string name="value_of_action_lock_unlock_screen">lock_unlock_screen</string>
 
     <!-- Array Actions on Play -->
     <string-array name="entities_of_on_played_actions">
@@ -37,6 +39,7 @@
         <item>@string/entity_of_action_play_track</item>
         <item>@string/entity_of_action_pause_track</item>
         <item>@string/entity_of_action_start_stop_video_recorder</item>
+        <item>@string/entity_of_action_lock_unlock_screen</item>
     </string-array>
 
     <string-array name="values_of_on_played_actions">
@@ -46,6 +49,7 @@
         <item>@string/value_of_action_play_track</item>
         <item>@string/value_of_action_pause_track</item>
         <item>@string/value_of_action_start_stop_video_recorder</item>
+        <item>@string/value_of_action_lock_unlock_screen</item>
     </string-array>
 
     <!-- array language -->

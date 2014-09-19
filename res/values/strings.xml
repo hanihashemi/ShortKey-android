@@ -31,6 +31,12 @@
 
     <!--Options-->
     <string name="options_title">OPTIONS</string>
+
+    <!--Language-->
+    <string name="admin_access_title">Screen Lock Permission</string>
+    <string name="admin_access_summary"></string>
+
+    <!--Language-->
     <string name="languages_list_title">Language</string>
     <string name="languages_list_summary">Change the language</string>
     <string name="languages_list_dialog_title">Change the language</string>
@@ -70,6 +76,7 @@
     <string name="entity_of_action_play_track">Play track</string>
     <string name="entity_of_action_pause_track">Pause track</string>
     <string name="entity_of_action_start_stop_video_recorder">Start/Stop video recorder</string>
+    <string name="entity_of_action_lock_unlock_screen">Lock/Unlock screen</string>
 
     <!--Array Language-->
     <string name="entity_of_language_english">English</string>

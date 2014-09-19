@@ -2,8 +2,8 @@ package net.ShortKey.settings;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import net.ShortKey.R;
 import net.ShortKey.ApplicationContextProvider;
+import net.ShortKey.R;
 
 /**
  * Created by hani on 7/30/14.
@@ -31,14 +31,12 @@ public class SettingsProperty {
         return prefs.getBoolean(ApplicationContextProvider.getContext().getString(R.string.key_checkbox_enable_when_music_is_playing), false);
     }
 
-    public int getDefaultVolume()
-    {
+    public int getDefaultVolume() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());
         return prefs.getInt(ApplicationContextProvider.getContext().getString(R.string.key_default_volume), 14);
     }
 
-    public void setDefaultVolume(int value)
-    {
+    public void setDefaultVolume(int value) {
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt(ApplicationContextProvider.getContext().getString(R.string.key_default_volume), value);
@@ -65,9 +63,21 @@ public class SettingsProperty {
         return prefs.getString(ApplicationContextProvider.getContext().getString(R.string.key_list_on_played_volume_double_down), ApplicationContextProvider.getContext().getString(R.string.value_of_action_none));
     }
 
-    public String getLanguage()
-    {
+    public String getLanguage() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());
         return prefs.getString(ApplicationContextProvider.getContext().getString(R.string.key_list_languages), ApplicationContextProvider.getContext().getString(R.string.value_of_language_english));
     }
+
+    public boolean getCheckboxAdminAccess() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());
+        return prefs.getBoolean(ApplicationContextProvider.getContext().getString(R.string.key_admin_access), true);
+    }
+
+    public void setCheckboxAdminAccess(boolean value) {
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(ApplicationContextProvider.getContext());
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean(ApplicationContextProvider.getContext().getString(R.string.key_admin_access), value);
+        editor.commit();
+    }
+
 }

@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
+import net.ShortKey.admin.AdminController;
 import net.ShortKey.service.ShortKeyServiceController;
 import net.ShortKey.settings.SettingsProperty;
 
@@ -43,7 +44,7 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
 
     public VolumeKeyReceiver(final Context mContext) {
         super();
-        mWaitTime = 500;
+        mWaitTime = 200;
         mHandler = new Handler();
         lastVolume = new SettingsProperty().getDefaultVolume();
         this.mContext = mContext;
@@ -182,8 +183,16 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
             } else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_pause_track))) {
                 sendMediaKeyCode(mContext, KeyEvent.KEYCODE_MEDIA_PAUSE);
                 MediaPlayer.create(ApplicationContextProvider.getContext(), R.raw.pause).start();
-            }else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_start_stop_video_recorder))) {
+            } else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_start_stop_video_recorder))) {
                 new ShortKeyServiceController().sendMessage(ShortKeyServiceController.MSG_START_STOP_RECORD);
+            } else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_lock_unlock_screen))) {
+                PowerManager pm = (PowerManager) ApplicationContextProvider.getContext().getSystemService(Context.POWER_SERVICE);
+                AdminController adminController = new AdminController();
+                if (pm.isScreenOn()) {
+                    adminController.LockScreen();
+                } else {
+                    adminController.UnLockScreen();
+                }
             }
         }
     }

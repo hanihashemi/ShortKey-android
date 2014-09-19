@@ -65,6 +65,11 @@
     <PreferenceCategory
             android:key="@string/key_category_options"
             android:title="@string/options_title">
+        <CheckBoxPreference
+                android:key="@string/key_admin_access"
+                android:summary="@string/admin_access_summary"
+                android:title="@string/admin_access_title"
+                android:defaultValue="false"/>
         <net.ShortKey.SeekBarPreference
                 android:key="@string/key_default_volume"
                 android:title="@string/default_volume_title"
