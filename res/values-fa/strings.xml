@@ -3,6 +3,7 @@
     <!--General-->
     <string name="app_name">کلید میانبر</string>
     <string name="notification_summary">برنامه ی کلید میانبر در پس زمینه فعال است</string>
+    <string name="notification_recording_summary">در حال تصویربرداری ...</string>
 
     <!--Run Service-->
     <string name="run_service_title">شروع یا توقف سرویس</string>

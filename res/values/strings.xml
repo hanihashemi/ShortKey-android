@@ -3,6 +3,7 @@
     <!--General-->
     <string name="app_name">ShortKey</string>
     <string name="notification_summary">ShortKey is running in background</string>
+    <string name="notification_recording_summary">Recording ...</string>
 
     <!--Run Service-->
     <string name="run_service_title">Start/Stop Service</string>

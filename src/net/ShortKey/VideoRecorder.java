@@ -104,12 +104,16 @@ public class VideoRecorder implements SurfaceHolder.Callback {
     }
 
     private boolean getVideoFilePath() {
-        File file = new File(Environment.getExternalStorageDirectory() + "/ShortKey");
-        if (!file.exists())
-            file.mkdir();
+        File fileShortKey = new File(Environment.getExternalStorageDirectory() + "/ShortKey");
+        if (!fileShortKey.exists())
+            fileShortKey.mkdir();
 
-        if (file.isDirectory() && file.exists() && file.canWrite()) {
-            videoFilePath = file.getPath() + "/" +
+        File fileVideo = new File(fileShortKey.getPath() + "/Video");
+        if (!fileVideo.exists())
+            fileVideo.mkdir();
+
+        if (fileVideo.isDirectory() && fileVideo.exists() && fileVideo.canWrite()) {
+            videoFilePath = fileVideo.getPath() + "/" +
                     DateFormat.format("yyyy-MM-dd_kk-mm-ss", new Date().getTime()) +
                     ".mp4";
             return true;

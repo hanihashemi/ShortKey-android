@@ -17,15 +17,24 @@ import net.ShortKey.R;
 public class Notification {
     public static int NOTIFICATION_ID = 1161065;
 
-    public void show() {
-        this.createNotification(ApplicationContextProvider.getContext().getString(R.string.notification_summary));
+    public enum Type {Normal, Recording};
+
+    public void show(Type type) {
+        if (type.equals(Type.Normal))
+            this.createNotification(ApplicationContextProvider.getContext().getString(R.string.notification_summary) , type);
+        else
+            this.createNotification(ApplicationContextProvider.getContext().getString(R.string.notification_recording_summary) , type);
     }
 
-    private void createNotification(String message) {
+    private void createNotification(String message , Type type) {
         NotificationManager mNotificationManager =
                 (NotificationManager) ApplicationContextProvider.getContext().getSystemService
                         (ApplicationContextProvider.getContext().NOTIFICATION_SERVICE);
-        android.app.Notification notification = new android.app.Notification(R.drawable.app_logo_notification, message, System.currentTimeMillis());
+        android.app.Notification notification;
+        if (type.equals(Type.Normal))
+            notification = new android.app.Notification(R.drawable.app_logo_notification, message, System.currentTimeMillis());
+        else
+            notification = new android.app.Notification(R.drawable.recording_notification, message, System.currentTimeMillis());
         PendingIntent contentIntent = PendingIntent.getActivity(ApplicationContextProvider.getContext(), 0, new Intent(ApplicationContextProvider.getContext(), Main
                 .class), 0);
         notification.setLatestEventInfo(ApplicationContextProvider.getContext(), ApplicationContextProvider.getContext().getString(R.string.app_name), message, contentIntent);
