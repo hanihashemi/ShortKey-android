@@ -88,4 +88,34 @@
         songs
     </string>
 
+    <string name="faq_question_2_title">
+        How to adjust shortcut keys?
+    </string>
+    <string name="faq_question_2_summary">
+        In the application menu choose "Volume shortcuts", 4 modes available for the volume buttons, By selecting any of them you can choose your needed actions.
+    </string>
+
+    <string name="faq_question_3_title">
+        How to adjust playing volume?
+    </string>
+    <string name="faq_question_3_summary">
+        You can use the slider from menu to adjust volume.
+    </string>
+
+    <!--Notice dialog-->
+    <string name="notice_dialog_screen_mode_title">Attention</string>
+    <string name="notice_dialog_screen_mode_summary">When screen off mode is activated, below actions cannot run:
+        \n
+        - Lock screen
+        \n
+        - Start/Stop video recorder
+        \n
+        - Pause track
+    </string>
+    <string name="notice_dialog_playing_mode_title">Attention</string>
+    <string name="notice_dialog_playing_mode_summary">
+        When music playing mode is activated and music is not playing, actions cannot run.
+    </string>
+    <string name="notice_dialog_ok">OK</string>
+
 </resources>

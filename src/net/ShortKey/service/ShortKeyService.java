@@ -13,10 +13,10 @@ import android.util.Log;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
 import net.ShortKey.VideoRecorder;
-import net.ShortKey.notify.Notification;
 import net.ShortKey.receiver.ScreenReceiver;
 import net.ShortKey.receiver.VolumeKeyReceiver;
 import net.ShortKey.settings.SettingsProperty;
+import net.ShortKey.tools.Notification;
 
 /**
  * Created by hani on 7/19/14.

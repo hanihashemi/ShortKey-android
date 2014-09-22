@@ -4,8 +4,6 @@ package net.ShortKey.settings;
  * Created by hani on 8/8/14.
  */
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -69,17 +67,13 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
             onRunServiceClicked();
         else if (key.equals(getString(R.string.key_checkbox_enable_action))) {
             new ShortKeyServiceController().restart();
-//            AlertDialog.Builder alert = new AlertDialog.Builder(this.getActivity());
-//            alert.setTitle("Doctor");
-//            alert.setMessage("message");
-//            alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                public void onClick(DialogInterface dialog, int id) {
-//                }
-//            });
-//            alert.show();
-        } else if (key.equals(getString(R.string.key_checkbox_enable_when_music_is_playing)))
+            if (new SettingsProperty().getCheckboxEnableWhenScreenIsOff())
+                new net.ShortKey.tools.AlertDialog(this.getActivity()).show(getString(R.string.notice_dialog_screen_mode_title), getString(R.string.notice_dialog_screen_mode_summary));
+        } else if (key.equals(getString(R.string.key_checkbox_enable_when_music_is_playing))) {
             new ShortKeyServiceController().restart();
-        else if (key.equals(getString(R.string.key_admin_access))) {
+            if (new SettingsProperty().getCheckboxEnableWhenMusicIsPlay())
+                new net.ShortKey.tools.AlertDialog(this.getActivity()).show(getString(R.string.notice_dialog_playing_mode_title), getString(R.string.notice_dialog_playing_mode_summary));
+        } else if (key.equals(getString(R.string.key_admin_access))) {
             AdminController adminController = new AdminController();
             if (adminController.isActivate())
                 adminController.deactiveAdminMode();

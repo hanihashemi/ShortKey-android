@@ -1,4 +1,4 @@
-package net.ShortKey.notify;
+package net.ShortKey.tools;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

@@ -34,6 +34,10 @@
     <string name="languages_list_summary">تغییر زبان</string>
     <string name="languages_list_dialog_title">تغییر زبان</string>
 
+    <!--Language-->
+    <string name="admin_access_title">اجازه برای قفل صفحه</string>
+    <string name="admin_access_summary"></string>
+
     <!--Support-->
     <string name="support_title">پشتیبانی</string>
     <string name="FAQ_summary">پرسش و پاسخ های رایج</string>
@@ -68,8 +72,54 @@
     <string name="entity_of_action_previous_track">آهنگ قبلی</string>
     <string name="entity_of_action_play_track">پخش آهنگ</string>
     <string name="entity_of_action_pause_track">مکث آهنگ</string>
+    <string name="entity_of_action_start_stop_video_recorder">شروع/ایست تصویر برداری</string>
+    <string name="entity_of_action_lock_unlock_screen">قفل/باز کردن گوشی</string>
 
     <!--FAQ-->
     <string name="faq_question_1_title">کلید میانبر چه کاری انجام می دهد؟</string>
-    <string name="faq_question_1_summary">کلید میانبر برنامه ای است که فرمان های خاصی را که برای دکمه های صدا تنظیم شده است را اجرا می کند</string>
+    <string name="faq_question_1_summary">
+        کلید میانبر برنامه ای است که فرمان های خاصی را که برای دکمه های صدا تنظیم شده است را اجرا می کند.
+    </string>
+
+    <string name="faq_question_2_title">
+        نحوه تنظیم کلید میانبر چگونه است؟
+    </string>
+    <string name="faq_question_2_summary">
+        در منوی برنامه
+        "کلید صدا"
+        را انتخاب کنید،
+        ۴ حالت برای دکمه های صدا موجود می باشد
+        با انتخاب هر کدام می توانید کار مورد نظری که می خواهید
+        آن دکمه انجام دهد را تنظیم کنید.
+
+    </string>
+
+    <string name="faq_question_3_title">
+        صدای آهنگ چگونه تنظیم می شود؟
+    </string>
+    <string name="faq_question_3_summary">
+        در هنگامی که سرویس برنامه فعال است،
+        دکمه های صدا دیگر صدای گوشی را تنظیم نمی کنند،
+         برای تنظیم صدای آهنگ باید به منوی برنامه رفته و از طریق
+        فسمت
+        "میزان صدای آهنگ"
+        آن را تنظیم کنید.
+    </string>
+
+    <!--Notice dialog-->
+    <string name="notice_dialog_screen_mode_title">توجه</string>
+    <string name="notice_dialog_screen_mode_summary">با فعال شدن حالت صفحه خاموش قابلیت های زیر در هنگامی که صفحه گوشی روشن است از کار می افتد:
+        \n
+        - قفل کردن صفحه
+        \n
+        - تصویر برداری
+        \n
+        - مکث آهنگ
+    </string>
+    <string name="notice_dialog_playing_mode_title">توجه</string>
+    <string name="notice_dialog_playing_mode_summary">
+        با فعال شدن حالت پخش آهنگ تمام قابلیت ها در هنگامی که آهنگی پخش نمی شود از کار می افتد.
+    </string>
+    <string name="notice_dialog_ok">باشه</string>
+
 </resources>

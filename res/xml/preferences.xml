@@ -97,6 +97,12 @@
             <Preference
                     android:title="@string/faq_question_1_title"
                     android:summary="@string/faq_question_1_summary"/>
+            <Preference
+                    android:title="@string/faq_question_2_title"
+                    android:summary="@string/faq_question_2_summary"/>
+            <Preference
+                    android:title="@string/faq_question_3_title"
+                    android:summary="@string/faq_question_3_summary"/>
         </PreferenceScreen>
         <Preference
                 android:key="@string/key_contact_us"
