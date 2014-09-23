@@ -48,7 +48,7 @@ public class VideoRecorder implements SurfaceHolder.Callback {
 
     public void stop() {
 
-        Toast.makeText(ApplicationContextProvider.getContext(), "The file is stored in: " + videoFilePath, Toast.LENGTH_LONG).show();
+        Toast.makeText(ApplicationContextProvider.getContext(), "The file is saved in: " + videoFilePath, Toast.LENGTH_LONG).show();
 
         try {
             mediaRecorder.stop();
@@ -74,9 +74,13 @@ public class VideoRecorder implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
-        camera = Camera.open();
-        mediaRecorder = new MediaRecorder();
-        camera.unlock();
+        try {
+            camera = Camera.open();
+            mediaRecorder = new MediaRecorder();
+            camera.unlock();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
 
         mediaRecorder.setPreviewDisplay(surfaceHolder.getSurface());
         mediaRecorder.setCamera(camera);
@@ -96,7 +100,7 @@ public class VideoRecorder implements SurfaceHolder.Callback {
 
         try {
             mediaRecorder.start();
-            Toast.makeText(ApplicationContextProvider.getContext(), "Start to record video", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ApplicationContextProvider.getContext(), "Start recording ...", Toast.LENGTH_SHORT).show();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -104,19 +108,23 @@ public class VideoRecorder implements SurfaceHolder.Callback {
     }
 
     private boolean getVideoFilePath() {
-        File fileShortKey = new File(Environment.getExternalStorageDirectory() + "/ShortKey");
-        if (!fileShortKey.exists())
-            fileShortKey.mkdir();
+        try {
+            File fileShortKey = new File(Environment.getExternalStorageDirectory() + "/ShortKey");
+            if (!fileShortKey.exists())
+                fileShortKey.mkdir();
 
-        File fileVideo = new File(fileShortKey.getPath() + "/Video");
-        if (!fileVideo.exists())
-            fileVideo.mkdir();
+            File fileVideo = new File(fileShortKey.getPath() + "/Video");
+            if (!fileVideo.exists())
+                fileVideo.mkdir();
 
-        if (fileVideo.isDirectory() && fileVideo.exists() && fileVideo.canWrite()) {
-            videoFilePath = fileVideo.getPath() + "/" +
-                    DateFormat.format("yyyy-MM-dd_kk-mm-ss", new Date().getTime()) +
-                    ".mp4";
-            return true;
+            if (fileVideo.isDirectory() && fileVideo.exists() && fileVideo.canWrite()) {
+                videoFilePath = fileVideo.getPath() + "/" +
+                        DateFormat.format("yyyy-MM-dd_kk-mm-ss", new Date().getTime()) +
+                        ".mp4";
+                return true;
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
         return false;

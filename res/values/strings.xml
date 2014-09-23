@@ -36,6 +36,10 @@
     <!--Language-->
     <string name="admin_access_title">Screen Lock Permission</string>
     <string name="admin_access_summary"></string>
+    <string name="admin_toast_alert">You should first enable screen lock permission in app menu.</string>
+    <string name="admin_access_description_in_dialog_box">Shortkey need admin permission for screen lock</string>
+    <string name="admin_access_disabled">Screen lock permission is disabled</string>
+    <string name="admin_access_enabled">Screen lock permission is enabled</string>
 
     <!--Language-->
     <string name="languages_list_title">Language</string>

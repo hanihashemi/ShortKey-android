@@ -9,6 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.Toast;
+import net.ShortKey.ApplicationContextProvider;
+import net.ShortKey.R;
 
 public class DarPolicy extends DeviceAdminReceiver {
     static SharedPreferences getSamplePreferences(Context context) {
@@ -22,7 +24,7 @@ public class DarPolicy extends DeviceAdminReceiver {
 
     @Override
     public void onEnabled(Context context, Intent intent) {
-        showToast(context, "Sample Device Admin: enabled");
+        showToast(context, ApplicationContextProvider.getContext().getString(R.string.admin_access_enabled));
     }
 
     @Override
@@ -32,7 +34,7 @@ public class DarPolicy extends DeviceAdminReceiver {
 
     @Override
     public void onDisabled(Context context, Intent intent) {
-        showToast(context, "Sample Device Admin: disabled");
+        showToast(context, ApplicationContextProvider.getContext().getString(R.string.admin_access_disabled));
     }
 }
 

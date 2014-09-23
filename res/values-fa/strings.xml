@@ -38,6 +38,10 @@
     <!--Language-->
     <string name="admin_access_title">اجازه برای قفل صفحه</string>
     <string name="admin_access_summary"></string>
+    <string name="admin_toast_alert">شما اول باید اجازه قفل صفحه را از طریق منو اپ فعال کنید</string>
+    <string name="admin_access_description_in_dialog_box">این برنامه برای قفل کردن صفحه نیاز به این دسترسی دارد</string>
+    <string name="admin_access_disabled">اجازه برای قفل صفحه گرفته شد</string>
+    <string name="admin_access_enabled">اجازه برای قفل صفحه داده شد</string>
 
     <!--Support-->
     <string name="support_title">پشتیبانی</string>

@@ -6,7 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
 import android.preference.PreferenceFragment;
+import android.widget.Toast;
 import net.ShortKey.ApplicationContextProvider;
+import net.ShortKey.R;
 
 /**
  * Created by hani on 9/17/14.
@@ -26,7 +28,8 @@ public class AdminController {
         boolean active = deviceManger.isAdminActive(compName);
         if (active) {
             deviceManger.lockNow();
-        }
+        }else
+            Toast.makeText(ApplicationContextProvider.getContext(), ApplicationContextProvider.getContext().getString(R.string.admin_toast_alert) , Toast.LENGTH_LONG).show();
     }
 
     public void UnLockScreen() {
@@ -47,7 +50,7 @@ public class AdminController {
         intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,
                 compName);
         intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,
-                "Additional text explaining why this needs to be added.");
+                ApplicationContextProvider.getContext().getString(R.string.admin_access_description_in_dialog_box));
         preferenceFragment.startActivityForResult(intent, 1);
     }
 
