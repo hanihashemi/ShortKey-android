@@ -58,7 +58,7 @@
                     android:dialogTitle="@string/volume_double_down_dialog_title"
                     android:entries="@array/entities_of_on_played_actions"
                     android:entryValues="@array/values_of_on_played_actions"
-                    android:defaultValue="@string/value_of_action_none"/>
+                    android:defaultValue="@string/value_of_action_lock_unlock_screen"/>
         </PreferenceScreen>
     </PreferenceCategory>
 
