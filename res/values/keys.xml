@@ -26,7 +26,6 @@
     <string name="value_of_action_none">none</string>
     <string name="value_of_action_next_track">next_track</string>
     <string name="value_of_action_previous_track">previous_track</string>
-    <string name="value_of_action_play_track">play_track</string>
     <string name="value_of_action_pause_track">pause_track</string>
     <string name="value_of_action_start_stop_video_recorder">start_stop_video_recorder</string>
     <string name="value_of_action_lock_unlock_screen">lock_unlock_screen</string>
@@ -36,7 +35,6 @@
         <item>@string/entity_of_action_none</item>
         <item>@string/entity_of_action_next_track</item>
         <item>@string/entity_of_action_previous_track</item>
-        <item>@string/entity_of_action_play_track</item>
         <item>@string/entity_of_action_pause_track</item>
         <item>@string/entity_of_action_start_stop_video_recorder</item>
         <item>@string/entity_of_action_lock_unlock_screen</item>
@@ -46,7 +44,6 @@
         <item>@string/value_of_action_none</item>
         <item>@string/value_of_action_next_track</item>
         <item>@string/value_of_action_previous_track</item>
-        <item>@string/value_of_action_play_track</item>
         <item>@string/value_of_action_pause_track</item>
         <item>@string/value_of_action_start_stop_video_recorder</item>
         <item>@string/value_of_action_lock_unlock_screen</item>

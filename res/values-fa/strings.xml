@@ -11,7 +11,8 @@
 
     <!-- Run only screen is off -->
     <string name="enable_short_key_title">حالت صفحه خاموش</string>
-    <string name="enable_short_key_summary">کلید میانبر تنها زمانی از دکمه های صدا استفاده می کند که صفحه  گوشی خاموش باشد
+    <string name="enable_short_key_summary">کلید میانبر تنها زمانی از دکمه های صدا استفاده می کند که صفحه گوشی خاموش
+        باشد
     </string>
 
     <!-- Run only music is play -->
@@ -105,15 +106,36 @@
     <string name="faq_question_3_summary">
         در هنگامی که سرویس برنامه فعال است،
         دکمه های صدا دیگر صدای گوشی را تنظیم نمی کنند،
-         برای تنظیم صدای آهنگ باید به منوی برنامه رفته و از طریق
+        برای تنظیم صدای آهنگ باید به منوی برنامه رفته و از طریق
         فسمت
         "میزان صدای آهنگ"
         آن را تنظیم کنید.
     </string>
 
+    <string name="faq_question_4_title">
+        ویژگی های کلید میانبر چیست؟
+    </string>
+    <string name="faq_question_4_summary">
+        این برنامه ویژگی های زیر رو به شما می دهد:
+        \n
+        - کنترل موزیک در حال پخش ( پخش ، مکث ، تغییر اهنگ)
+        \n
+        - تصویر برداری (حتی در حالتی که صفحه ی گوشی خاموش است)
+        \n
+        - قفل کردن و باز کردن گوشی
+    </string>
+
+    <string name="faq_question_5_title">
+        این برنامه به درد چه کسانی می خورد؟
+    </string>
+    <string name="faq_question_5_summary">
+        کسانی که دکمه پاور گوشی شان خراب شده یا کسانی که اهل موزیک هستند و برای تغییر اهنگ در حال پخش نمی خواهند هر دفعه گوشی شان را از جیبشان در اورند و یا کسانی که می خواهند در لحظه تصویر برداری کنند
+    </string>
+
     <!--Notice dialog-->
     <string name="notice_dialog_screen_mode_title">توجه</string>
-    <string name="notice_dialog_screen_mode_summary">با فعال شدن حالت صفحه خاموش قابلیت های زیر در هنگامی که صفحه گوشی روشن است از کار می افتد:
+    <string name="notice_dialog_screen_mode_summary">با فعال شدن حالت صفحه خاموش قابلیت های زیر در هنگامی که صفحه گوشی
+        روشن است از کار می افتد:
         \n
         - قفل کردن صفحه
         \n

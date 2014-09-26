@@ -107,6 +107,26 @@
         You can use the slider from menu to adjust volume.
     </string>
 
+    <string name="faq_question_4_title">
+        ویژگی های کلید میانبر چیست؟
+    </string>
+    <string name="faq_question_4_summary">
+        این برنامه ویژگی های زیر رو به شما می دهد:
+        \n
+        - کنترل موزیک در حال پخش ( پخش ، مکث ، تغییر اهنگ)
+        \n
+        - تصویر برداری (حتی در حالتی که صفحه ی گوشی خاموش است)
+        \n
+        - قفل کردن و باز کردن گوشی
+    </string>
+
+    <string name="faq_question_5_title">
+        این برنامه به درد چه کسانی می خورد؟
+    </string>
+    <string name="faq_question_5_summary">
+        کسانی که دکمه پاور گوشی شان خراب شده یا کسانی که اهل موزیک هستند و برای تغییر اهنگ در حال پخش نمی خواهند هر دفعه گوشی شان را از جیبشان در اورند و یا کسانی که می خواهند در لحظه تصویر برداری کنند
+    </string>
+
     <!--Notice dialog-->
     <string name="notice_dialog_screen_mode_title">Attention</string>
     <string name="notice_dialog_screen_mode_summary">When screen off mode is activated, below actions cannot run:

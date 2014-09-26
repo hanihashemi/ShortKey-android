@@ -50,7 +50,7 @@
                     android:dialogTitle="@string/volume_double_up_dialog_title"
                     android:entries="@array/entities_of_on_played_actions"
                     android:entryValues="@array/values_of_on_played_actions"
-                    android:defaultValue="@string/value_of_action_play_track"/>
+                    android:defaultValue="@string/value_of_action_none"/>
             <ListPreference
                     android:key="pref_key_list_on_music_played_volume_double_down"
                     android:title="@string/volume_double_down_title"
@@ -97,6 +97,12 @@
             <Preference
                     android:title="@string/faq_question_1_title"
                     android:summary="@string/faq_question_1_summary"/>
+            <Preference
+                    android:title="@string/faq_question_4_title"
+                    android:summary="@string/faq_question_4_summary"/>
+            <Preference
+                    android:title="@string/faq_question_5_title"
+                    android:summary="@string/faq_question_5_summary"/>
             <Preference
                     android:title="@string/faq_question_2_title"
                     android:summary="@string/faq_question_2_summary"/>

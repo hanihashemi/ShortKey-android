@@ -177,9 +177,6 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
             } else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_previous_track))) {
                 sendMediaKeyCode(mContext, KeyEvent.KEYCODE_MEDIA_PREVIOUS);
                 MediaPlayer.create(ApplicationContextProvider.getContext(), R.raw.previous).start();
-            } else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_play_track))) {
-                sendMediaKeyCode(mContext, KeyEvent.KEYCODE_MEDIA_PLAY);
-                MediaPlayer.create(ApplicationContextProvider.getContext(), R.raw.play).start();
             } else if (action.equals(ApplicationContextProvider.getContext().getString(R.string.value_of_action_pause_track))) {
                 sendMediaKeyCode(mContext, KeyEvent.KEYCODE_MEDIA_PAUSE);
                 MediaPlayer.create(ApplicationContextProvider.getContext(), R.raw.pause).start();
