@@ -17,7 +17,7 @@
     <!--Screen short keys-->
     <string name="key_screen_on_play_mode">pref_key_screen_on_music_playing</string>
 
-    <!--Keys on music played-->
+    <!--Keys on music play ed-->
     <string name="key_list_on_played_volume_up">pref_key_list_on_music_played_volume_up</string>
     <string name="key_list_on_played_volume_down">pref_key_list_on_music_played_volume_down</string>
     <string name="key_list_on_played_volume_double_up">pref_key_list_on_music_played_volume_double_up</string>
