@@ -26,6 +26,7 @@ public class ShortKeyService extends Service {
     private ScreenReceiver screenReceiver = null;
     private static MediaPlayer mediaPlayer;
     private VideoRecorder videoRecorder;
+    public static boolean recieverStatus = false;
 
     final Messenger mMessenger = new Messenger(new IncomingHandler());
 
@@ -88,6 +89,7 @@ public class ShortKeyService extends Service {
             intentFilter.setPriority(Integer.MAX_VALUE);
             intentFilter.addCategory("android.intent.category.DEFAULT");
             this.getApplicationContext().registerReceiver(volumeKeyReceiver, intentFilter);
+            recieverStatus = true;
         }
     }
 
@@ -109,6 +111,7 @@ public class ShortKeyService extends Service {
             } catch (Exception ex) {
                 Log.d("Volume service", ex.getMessage());
             }
+            recieverStatus = false;
         }
     }
 

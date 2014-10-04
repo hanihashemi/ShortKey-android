@@ -14,6 +14,7 @@ import android.view.KeyEvent;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
 import net.ShortKey.admin.AdminController;
+import net.ShortKey.service.ShortKeyService;
 import net.ShortKey.service.ShortKeyServiceController;
 import net.ShortKey.settings.SettingsProperty;
 
@@ -79,6 +80,8 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
     }
 
     public void onReceive(final Context context, final Intent intent) {
+        if (!ShortKeyService.recieverStatus)
+            return;
         if (mAudioManager.getMode() != 0)
             return;
 
