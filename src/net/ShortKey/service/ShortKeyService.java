@@ -57,7 +57,7 @@ public class ShortKeyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        new Notification().show(Notification.Type.Normal);
+        new Notification().show(this, Notification.Type.Normal);
         registerVolumeKeyReceiver();
         registerScreenReceiver();
 
@@ -176,7 +176,7 @@ public class ShortKeyService extends Service {
             videoRecorder.start();
 
             Notification.close();
-            new Notification().show(Notification.Type.Recording);
+            new Notification().show(this, Notification.Type.Recording);
         } else {
             stopVideoRecorder();
         }
@@ -188,7 +188,7 @@ public class ShortKeyService extends Service {
             videoRecorder = null;
 
             Notification.close();
-            new Notification().show(Notification.Type.Normal);
+            new Notification().show(this, Notification.Type.Normal);
         }
     }
 }
