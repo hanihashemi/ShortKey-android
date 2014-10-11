@@ -89,8 +89,8 @@ public class ShortKeyService extends Service {
             intentFilter.setPriority(Integer.MAX_VALUE);
             intentFilter.addCategory("android.intent.category.DEFAULT");
             this.getApplicationContext().registerReceiver(volumeKeyReceiver, intentFilter);
-            recieverStatus = true;
         }
+        recieverStatus = true;
     }
 
     private void registerScreenReceiver() {
