@@ -5,6 +5,7 @@
     <string name="key_category_options">pref_key_category_options</string>
     <string name="key_checkbox_run_service">pref_key_checkbox_run_service</string>
     <string name="key_category_short_keys">pref_key_category_short_keys</string>
+    <string name="key_category_service">pref_key_category_service</string>
     <string name="key_list_languages">pref_key_list_languages</string>
     <string name="key_category_support">pref_key_support_category</string>
     <string name="key_faq">pref_key_faq</string>

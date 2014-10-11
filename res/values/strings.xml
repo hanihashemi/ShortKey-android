@@ -30,6 +30,9 @@
     <!--Short Keys-->
     <string name="short_keys_title">SHORT KEYS</string>
 
+    <!--Service-->
+    <string name="short_keys_service">SERVICE</string>
+
     <!--Options-->
     <string name="options_title">OPTIONS</string>
 

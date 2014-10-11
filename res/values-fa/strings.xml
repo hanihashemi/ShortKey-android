@@ -30,6 +30,9 @@
     <!--Short Keys-->
     <string name="short_keys_title">کلید های میانبر</string>
 
+    <!--SERVICE-->
+    <string name="short_keys_service">خدمات</string>
+
     <!--Options-->
     <string name="options_title">تنظیمات</string>
     <string name="languages_list_title">انتخاب زبان</string>

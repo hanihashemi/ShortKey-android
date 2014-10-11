@@ -1,6 +1,2 @@
-.idea
-.idea/*
-out
-out/*
-out/**
-out/*/*/*/*/*/*/*/*/*/*
+.idea/
+out/
