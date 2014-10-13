@@ -35,6 +35,17 @@ public class ShortKeyServiceController {
         }
     }
 
+    public void ToggleServiceStatusAndSetCheckbox() {
+        boolean serviceStatus = ApplicationContextProvider.isSCheckServerRunning();
+        serviceStatus = !serviceStatus;
+
+        new SettingsProperty().setCheckboxService(serviceStatus);
+        if (serviceStatus)
+            ApplicationContextProvider.getContext().startService(new Intent(ApplicationContextProvider.getContext(), ShortKeyService.class));
+        else
+            ApplicationContextProvider.getContext().stopService(new Intent(ApplicationContextProvider.getContext(), ShortKeyService.class));
+    }
+
     public void sendMessage(final int message) {
         ServiceConnection mConnection = new ServiceConnection() {
             public void onServiceConnected(ComponentName className, IBinder service) {

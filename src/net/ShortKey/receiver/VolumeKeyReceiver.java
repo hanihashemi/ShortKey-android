@@ -80,7 +80,7 @@ public class VolumeKeyReceiver extends BroadcastReceiver {
     }
 
     public void onReceive(final Context context, final Intent intent) {
-        if (!ShortKeyService.recieverStatus)
+        if (!ShortKeyService.receiverStatus)
             return;
         if (mAudioManager.getMode() != 0)
             return;

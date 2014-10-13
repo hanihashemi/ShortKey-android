@@ -42,5 +42,14 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
             </intent-filter>
         </receiver>
+
+        <receiver android:name="WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="net.ShortKey.layout.widget.widgetIcon"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/app_widget_provider_info"/>
+        </receiver>
     </application>
 </manifest>

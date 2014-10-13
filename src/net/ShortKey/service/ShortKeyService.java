@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -13,6 +14,7 @@ import android.util.Log;
 import net.ShortKey.ApplicationContextProvider;
 import net.ShortKey.R;
 import net.ShortKey.VideoRecorder;
+import net.ShortKey.WidgetProvider;
 import net.ShortKey.receiver.ScreenReceiver;
 import net.ShortKey.receiver.VolumeKeyReceiver;
 import net.ShortKey.settings.SettingsProperty;
@@ -26,7 +28,7 @@ public class ShortKeyService extends Service {
     private ScreenReceiver screenReceiver = null;
     private static MediaPlayer mediaPlayer;
     private VideoRecorder videoRecorder;
-    public static boolean recieverStatus = false;
+    public static boolean receiverStatus = false;
 
     final Messenger mMessenger = new Messenger(new IncomingHandler());
 
@@ -62,8 +64,18 @@ public class ShortKeyService extends Service {
         registerScreenReceiver();
 
         setMusicStatus();
+        updateWidget();
 
         return Service.START_NOT_STICKY;
+    }
+
+    private void updateWidget() {
+        Intent intent = new Intent(this, WidgetProvider.class);
+        intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+
+        int[] ids = {R.xml.app_widget_provider_info};
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
+        sendBroadcast(intent);
     }
 
     private void setMusicStatus() {
@@ -90,7 +102,7 @@ public class ShortKeyService extends Service {
             intentFilter.addCategory("android.intent.category.DEFAULT");
             this.getApplicationContext().registerReceiver(volumeKeyReceiver, intentFilter);
         }
-        recieverStatus = true;
+        receiverStatus = true;
     }
 
     private void registerScreenReceiver() {
@@ -111,7 +123,7 @@ public class ShortKeyService extends Service {
             } catch (Exception ex) {
                 Log.d("Volume service", ex.getMessage());
             }
-            recieverStatus = false;
+            receiverStatus = false;
         }
     }
 
@@ -145,6 +157,7 @@ public class ShortKeyService extends Service {
         unregisterVolumeKeyReceiver();
 
         Notification.close();
+        updateWidget();
 
         if (new SettingsProperty().getCheckboxService()) {
             Intent restartServiceIntent = new Intent(getApplicationContext(), this.getClass());
