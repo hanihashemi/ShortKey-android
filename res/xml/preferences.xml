@@ -17,19 +17,16 @@
                 android:key="@string/key_checkbox_run_service"
                 android:summary="@string/run_service_summary"
                 android:title="@string/run_service_title"
-                android:icon="@drawable/service"
                 android:defaultValue="true"/>
         <CheckBoxPreference
                 android:key="@string/key_checkbox_enable_action"
                 android:summary="@string/enable_short_key_summary"
                 android:title="@string/enable_short_key_title"
-                android:icon="@drawable/screenoff"
                 android:defaultValue="false"/>
         <CheckBoxPreference
                 android:key="@string/key_checkbox_enable_when_music_is_playing"
                 android:summary="@string/enable_music_play_summary"
                 android:title="@string/enable_music_play_title"
-                android:icon="@drawable/play"
                 android:defaultValue="false"/>
     </PreferenceCategory>
     <PreferenceCategory
@@ -97,7 +94,6 @@
                 android:key="@string/key_faq"
                 android:title="@string/FAQ_title"
                 android:summary="@string/FAQ_summary"
-                android:icon="@drawable/faq"
                 android:persistent="false">
             <Preference
                     android:title="@string/faq_question_1_title"
@@ -119,7 +115,6 @@
                 android:key="@string/key_contact_us"
                 android:summary="@string/contact_us_summary"
                 android:title="@string/contact_us_title"
-                android:icon="@drawable/contact"
                 />
     </PreferenceCategory>
 </PreferenceScreen>

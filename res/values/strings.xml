@@ -146,4 +146,10 @@
     </string>
     <string name="notice_dialog_ok">OK</string>
 
+    <string name="always_enable">همیشه فعال</string>
+
+    <string-array name="typess">
+        <item>@string/always_enable</item>
+    </string-array>
+
 </resources>

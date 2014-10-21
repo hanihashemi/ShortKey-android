@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_color">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingTop="10dp"
+            android:layout_alignParentLeft="true" android:id="@+id/linearLayout2">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="انتخاب حالت"
+                android:id="@+id/textView" android:layout_gravity="center_horizontal"/>
+        <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/typess"
+                android:prompt="@string/always_enable"
+                />
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/linearLayout">
+        <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/imageView2323"
+                android:src="@drawable/home_shortkey"
+                android:layout_gravity="center_horizontal"/>
+        <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="@drawable/toggle_me"
+                android:id="@+id/toggleButton" android:layout_gravity="center_horizontal" android:textOff=" "
+                android:textOn=" "/>
+        <TextSwitcher
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serviceStatus"
+                android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/linearLayout223"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="12dp"
+            android:layout_alignParentLeft="true">
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton1"
+                android:background="@color/main_color"
+                android:src="@drawable/settings_selector"
+                android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:background="@color/main_color"
+                android:src="@drawable/key_selector"
+                android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton3"
+                android:background="@color/main_color"
+                android:src="@drawable/volume_selector"
+                android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ffffffff"
+            android:layout_alignBottom="@+id/linearLayout223">
+    </LinearLayout>
+</RelativeLayout>
