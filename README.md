@@ -1,29 +1,15 @@
-# README #
+#Shortkey Android App
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## What Does It Do?
 
-### What is this repository for? ###
+ShortKey is an app to use volume key for actions like playing or pausing songs
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+- Control music (pause track, next track, previous track)
+- Start/stop video recording
+- Lock/unlock screen
 
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Default configuration:
+Volume up: Next track
+Volume down: Previous track
+Volume double up: Pause track
+Volume double down: Lock/unlock screen
