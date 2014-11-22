@@ -9,7 +9,7 @@ ShortKey is an app to use volume key for actions like playing or pausing songs
 - Lock/unlock screen
 
 #### Default configuration:
-Volume up: Next track
-Volume down: Previous track
-Volume double up: Pause track
+Volume up: Next track, 
+Volume down: Previous track, 
+Volume double up: Pause track, 
 Volume double down: Lock/unlock screen
