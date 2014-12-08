@@ -13,3 +13,7 @@ Volume up: Next track,
 Volume down: Previous track, 
 Volume double up: Pause track, 
 Volume double down: Lock/unlock screen
+
+![alt tag](https://github.com/hanihashemi/Short-key/blob/master/screen-shot/net.ShortKey0.jpg)
+![alt tag](https://github.com/hanihashemi/Short-key/blob/master/screen-shot/net.ShortKey1.jpg)
+![alt tag](https://github.com/hanihashemi/Short-key/blob/master/screen-shot/net.ShortKey2.jpg)
